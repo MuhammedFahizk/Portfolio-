@@ -1,0 +1,173 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'popins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #080808;
+    color: white;
+}
+#header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/bcg.png.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    padding: 10px 10%;
+    
+}
+#logo{
+    color:aqua;
+    
+    font-size: 30px;
+}
+#logoname{
+    color:#fff;
+    margin-left: -290px;
+    margin-top: 5px;
+}
+nav{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px; /* Use "font-size" instead of "size" */
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0; /* Start with a width of 0 */
+    height: 3px;
+    background:aqua;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.2s; /* Use "width" for the transition property */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Increase the width to 100% on hover */
+}
+.header_text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header_text h1{
+    font-size: 50px;
+    margin-top: 20px;
+}
+.header_text h1 span{
+    color:aqua ;
+}
+/*--------about------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    justify-content:space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about_col_1{
+    flex-basis: 35%;
+
+}
+.about_col_1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.about_col_2{
+    flex-basis: 60%;
+
+}
+.subtitle{
+    color:#fff;
+    font-weight: 600px;
+    font-size: 60px;
+}
+.tab_titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+/* Define styles for tab links */
+.tab_links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600; /* Corrected from font-weight: 500px; */
+    cursor: pointer;
+    position: relative;
+}
+
+/* Define styles for the line indicator beneath tab links */
+.tab_links::after {
+    content:'';
+    width: 0;
+    height: 3px;
+    background:aqua;
+    position:absolute;
+    left: 0%;
+    bottom: -6px;
+    transition:0.5s;
+}
+.tab_links:hover::after {
+    width: 100%;
+}
+.tab_links.active_link::after {
+    width: 50%;
+}
+    
+.tab_content ul li{
+    margin: 10px 0;
+    list-style: none;
+
+}
+.tab_content ul li span{
+    font-weight: 14px;
+    color: aqua;
+}
+.tab_content {
+display:none;
+
+}
+.tab_content.active-tab{
+    display: block;
+
+}
+.about_col_1{
+    /* margin-right: 0px;
+    font-size: 18px;
+    font-weight: 600; */
+    cursor: pointer;
+    position:relative;
+}
+.about_col_1::after{
+    content:'';
+    width: 0;
+    height: 100%;
+    position:absolute;
+    left: 0%;
+    bottom: opx;
+    background-color: rgba(0, 255, 255, 0.269);
+    transition:5ms;
+
+}
+.about_col_1:hover::after{
+    border-radius: 15px;
+    width: 100%;
+    
+}
